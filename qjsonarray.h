@@ -52,7 +52,7 @@ class QStringList;
 template <typename T> class QList;
 typedef QList<QVariant> QVariantList;
 
-class Q_JSONRPC_EXPORT QJsonArray
+class  QJsonArray
 {
 public:
     QJsonArray();
@@ -201,7 +201,7 @@ private:
     friend class QJsonPrivate::Data;
     friend class QJsonValue;
     friend class QJsonDocument;
-    friend Q_JSONRPC_EXPORT QDebug operator<<(QDebug, const QJsonArray &);
+    friend  QDebug operator<<(QDebug, const QJsonArray &);
 
     QJsonArray(QJsonPrivate::Data *data, QJsonPrivate::Array *array);
     void compact();
@@ -212,7 +212,7 @@ private:
 };
 
 #if !defined(QT_NO_DEBUG_STREAM) && !defined(QT_JSON_READONLY)
-Q_JSONRPC_EXPORT QDebug operator<<(QDebug, const QJsonArray &);
+ QDebug operator<<(QDebug, const QJsonArray &);
 #endif
 
 QT_END_NAMESPACE
